@@ -103,7 +103,9 @@ app.use(
 // *****************************************************
 // <!-- API Routes -->
 // *****************************************************
-
+app.get('/', (req, res) => {
+  res.render('pages/splashPage');
+});
 // Authentication Middleware?
 const auth = (req, res, next) => {
   if (!req.session.user) {
@@ -113,12 +115,6 @@ const auth = (req, res, next) => {
   next();
 };
 
-// Route: /
-// Method: GET
-// take user to login page by default
-app.get('/', (req, res) => {
-    res.render('pages/splashPage');
-});
 
 
 
