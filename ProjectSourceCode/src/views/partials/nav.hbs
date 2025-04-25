@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+      <a class="navbar-brand" href="/"></a>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          {{#if user}} <!-- Changed from email to user -->
+            <a class="nav-link" href="/home">Home</a>
+          {{else}}
+            <a class="nav-link" href="/login">Home</a>
+          {{/if}}
+        </li>
+        <li class="nav-item">
+          {{#if user}}
+            <a class="nav-link" href='/encrypt'>Encrypt</a>
+          {{else}}
+            <a class="nav-link" href='/login'>Encrypt</a>
+          {{/if}}
+        </li>
+        <li class="nav-item">
+          {{#if user}}
+            <a class="nav-link" href='/decrypt'>Decrypt</a>
+          {{else}}
+            <a class="nav-link" href='/login'>Decrypt</a>
+          {{/if}}
+        </li>
+        <li class="nav-item">
+          {{#if user}}
+            <a class="nav-link" href='/message'>Message</a>
+          {{else}}
+            <a class="nav-link" href='/login'>Message</a>
+          {{/if}}
+        </li>
+        <li class="nav-item">
+          {{#if user}}
+            <a class="nav-link" href='/about'>About</a>
+          {{else}}
+            <a class="nav-link" href='/login'>About</a>
+          {{/if}}
+        </li>
+        <li class="nav-item">
+          {{#if user}}
+            <a class="nav-link" href='/profile'>Profile</a>
+          {{else}}
+            <a class="nav-link" href='/login'>Profile</a>
+          {{/if}}
+        </li>
+      </ul>
+    </div>
+
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+      <ul class="navbar-nav ms-auto">
+        {{#if user}}
+        <li class="nav-item">
+          <a class="nav-link" href='/logout'>Log Out</a>
+        </li>
+        {{else}}
+        <li class="nav-item">
+          <a class="nav-link" href='/login'>Log In</a>
+        </li>
+        {{/if}}
+      </ul>
+    </div>
+</nav>
