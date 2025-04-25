@@ -1,0 +1,21 @@
+Planning:
+
+Description:
+Enigmagram will be a website where users can encrypt and decrypt messages using four methods. Caesar Cipher, Vignere Cipher, Bacon's Cipher, and Color-based Cipher. 
+They will then have the opportunity to send these encrypted and decrypted messages over email to their friends. They can also go and decrypt the messages after reading a small about page of how to.
+
+Features: 
+- Slider for caesar cipher shift
+- Email sending
+- Login/register
+- Chaining
+- Key input filed for vignere
+- Option to do bacon's cipher with case sensitivity
+- About pages with caesar cipher wheel/frequency tables/ etc.
+Challenge: Message sending within website not just email.
+
+Tools:
+- API to display the color blocks
+- Postgres database to save register information and cipher code
+- File upload for about pages.
+- Challenge: API or something for in website messages.
