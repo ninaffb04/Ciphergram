@@ -115,6 +115,9 @@ const auth = (req, res, next) => {
   next();
 };
 
+app.get('/caesar', (req, res) => {
+  res.render('pages/caesarCipher');
+});
 
 
 
