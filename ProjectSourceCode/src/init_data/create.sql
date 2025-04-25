@@ -16,9 +16,9 @@ CREATE TABLE IF NOT EXISTS friendships (
   id SERIAL PRIMARY KEY NOT NULL,
   user_id INT NOT NULL,
   friend_id INT NOT NULL,
-  status ENUM('pending', 'accepted', 'blocked') NOT NULL DEFAULT 'pending',
-  requested_at DATETIME NOT NULL,
-  updated_at DATETIME NOT NULL,
+   status TEXT CHECK (status IN ('pending', 'accepted', 'blocked')),
+  requested_at TIMESTAMP NOT NULL,
+  updated_at TIMESTAMP NOT NULL,
   FOREIGN KEY (user_id) REFERENCES users (user_id) ON DELETE CASCADE,
   FOREIGN KEY (friend_id) REFERENCES users (user_id) ON DELETE CASCADE
 );
